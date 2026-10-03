@@ -1,36 +1,226 @@
 {
-  "items": [
+  "items": [],
+  "refluxOrders": [
     {
-      "code": "CN-001",
-      "plateSize": "18x24cm",
-      "chemicalBatch": "B-0620",
-      "exposure": "8分钟",
-      "waterSource": "井水过滤",
-      "box": "蓝盒A-03",
-      "status": "待入盒",
-      "defect": "边角显影不均",
-      "logs": [
+      "id": "HL-mus3lzbv-30mh",
+      "source": "回收桶C-21",
+      "concentration": 13.2,
+      "weight": 4.5,
+      "status": "已确认",
+      "readings": [
         {
-          "at": "2026-06-20",
-          "step": "曝光",
-          "note": "阴天补时2分钟"
+          "at": "2026-10-03T07:56:37.531Z",
+          "by": "赵师傅",
+          "concentration": 13.2,
+          "weight": 4.5,
+          "effective": true,
+          "pending": false
         },
         {
-          "at": "2026-06-21T03:50:30.042Z",
-          "step": "入盒",
-          "note": "放入A盒"
+          "at": "2026-10-03T07:56:37.541Z",
+          "by": "钱师傅",
+          "concentration": 13.3,
+          "weight": 4.6,
+          "effective": false,
+          "pending": true
         }
       ],
-      "steps": [
+      "tankId": "ZSG-mus3lzci-4spv",
+      "createdAt": "2026-10-03T07:56:37.531Z",
+      "confirmedAt": "2026-10-03T07:56:37.564Z"
+    }
+  ],
+  "tanks": [
+    {
+      "id": "ZSG-mus3lzci-4spv",
+      "name": "三号缸",
+      "status": "可用",
+      "ratio": "1:4",
+      "targetConcentration": 5,
+      "version": 2,
+      "availableWeight": 4.5,
+      "usedWeight": 0.8,
+      "operations": [
         {
-          "at": "2026-06-21T03:50:30.042Z",
-          "step": "入盒",
-          "developStatus": "稳定",
-          "defect": "边角显影不均",
-          "repair": "边角重涂",
-          "note": "放入A盒"
+          "opId": "pour-c21",
+          "type": "倒缸确认",
+          "at": "2026-10-03T07:56:37.573Z",
+          "weight": 4.5,
+          "refluxOrderIds": [
+            "HL-mus3lzbv-30mh"
+          ]
+        },
+        {
+          "opId": "use-bl003",
+          "type": "玻璃板用液",
+          "at": "2026-10-03T07:56:37.608Z",
+          "weight": 0.8,
+          "plateId": "BL-mus3lzdp-rand"
         }
-      ]
+      ],
+      "_refluxOrders": [
+        {
+          "id": "HL-mus3lzbv-30mh",
+          "source": "回收桶C-21",
+          "concentration": 13.2,
+          "weight": 4.5,
+          "status": "已确认",
+          "readings": [
+            {
+              "at": "2026-10-03T07:56:37.531Z",
+              "by": "赵师傅",
+              "concentration": 13.2,
+              "weight": 4.5,
+              "effective": true,
+              "pending": false
+            },
+            {
+              "at": "2026-10-03T07:56:37.541Z",
+              "by": "钱师傅",
+              "concentration": 13.3,
+              "weight": 4.6,
+              "effective": false,
+              "pending": true
+            }
+          ],
+          "tankId": "ZSG-mus3lzci-4spv",
+          "createdAt": "2026-10-03T07:56:37.531Z",
+          "confirmedAt": "2026-10-03T07:56:37.564Z"
+        }
+      ],
+      "createdAt": "2026-10-03T07:56:37.554Z",
+      "pouredAt": "2026-10-03T07:56:37.573Z",
+      "pouredBy": "未记名"
+    }
+  ],
+  "plates": [
+    {
+      "id": "BL-mus3lzdp-rand",
+      "code": "BL-003",
+      "tankId": "ZSG-mus3lzci-4spv",
+      "usedWeight": 0.8,
+      "conclusion": {
+        "text": "浓度不足，需复洗",
+        "tankVersion": 2,
+        "valid": true,
+        "pendingRecalc": false,
+        "recalcAt": "2026-10-03T07:56:37.631Z"
+      },
+      "boxPermit": {
+        "text": "暂缓入盒",
+        "tankVersion": 2,
+        "valid": true,
+        "pendingRecalc": false,
+        "recalcAt": "2026-10-03T07:56:37.631Z"
+      },
+      "history": [
+        {
+          "at": "2026-10-03T07:56:37.621Z",
+          "reason": "浓度/配比变更",
+          "tankVersion": 1,
+          "conclusion": {
+            "text": "合格",
+            "tankVersion": 1,
+            "valid": true,
+            "pendingRecalc": false,
+            "recalcAt": "2026-10-03T07:56:37.608Z"
+          },
+          "boxPermit": {
+            "text": "准予入盒",
+            "tankVersion": 1,
+            "valid": true,
+            "pendingRecalc": false,
+            "recalcAt": "2026-10-03T07:56:37.608Z"
+          }
+        }
+      ],
+      "createdAt": "2026-10-03T07:56:37.597Z",
+      "usedAt": "2026-10-03T07:56:37.608Z"
+    }
+  ],
+  "spectrum": [
+    {
+      "id": "BP-mus3lzcs-245b",
+      "refluxOrderId": "HL-mus3lzbv-30mh",
+      "tankId": "ZSG-mus3lzci-4spv",
+      "createdAt": "2026-10-03T07:56:37.564Z"
+    }
+  ],
+  "archive": [
+    {
+      "type": "回流单建档",
+      "orderId": "HL-mus3lzbv-30mh",
+      "source": "回收桶C-21",
+      "archivedAt": "2026-10-03T07:56:37.531Z"
+    },
+    {
+      "type": "读数提交(后到)",
+      "orderId": "HL-mus3lzbv-30mh",
+      "reading": {
+        "at": "2026-10-03T07:56:37.541Z",
+        "by": "钱师傅",
+        "concentration": 13.3,
+        "weight": 4.6,
+        "effective": false,
+        "pending": true
+      },
+      "status": "pending",
+      "archivedAt": "2026-10-03T07:56:37.541Z"
+    },
+    {
+      "type": "回流确认",
+      "orderId": "HL-mus3lzbv-30mh",
+      "tankId": "ZSG-mus3lzci-4spv",
+      "archivedAt": "2026-10-03T07:56:37.564Z"
+    },
+    {
+      "type": "倒缸确认",
+      "tankId": "ZSG-mus3lzci-4spv",
+      "result": "confirmed",
+      "opId": "pour-c21",
+      "archivedAt": "2026-10-03T07:56:37.573Z"
+    },
+    {
+      "type": "玻璃板用液",
+      "plateId": "BL-mus3lzdp-rand",
+      "tankId": "ZSG-mus3lzci-4spv",
+      "weight": 0.8,
+      "archivedAt": "2026-10-03T07:56:37.608Z"
+    },
+    {
+      "type": "失效",
+      "plateId": "BL-mus3lzdp-rand",
+      "at": "2026-10-03T07:56:37.621Z",
+      "reason": "浓度/配比变更",
+      "tankVersion": 1,
+      "conclusion": {
+        "text": "合格",
+        "tankVersion": 1,
+        "valid": true,
+        "pendingRecalc": false,
+        "recalcAt": "2026-10-03T07:56:37.608Z"
+      },
+      "boxPermit": {
+        "text": "准予入盒",
+        "tankVersion": 1,
+        "valid": true,
+        "pendingRecalc": false,
+        "recalcAt": "2026-10-03T07:56:37.608Z"
+      }
+    },
+    {
+      "type": "配比变更",
+      "tankId": "ZSG-mus3lzci-4spv",
+      "version": 2,
+      "affectedCount": 1,
+      "archivedAt": "2026-10-03T07:56:37.621Z"
+    },
+    {
+      "type": "重算",
+      "plateId": "BL-mus3lzdp-rand",
+      "tankId": "ZSG-mus3lzci-4spv",
+      "version": 2,
+      "archivedAt": "2026-10-03T07:56:37.631Z"
     }
   ]
 }
