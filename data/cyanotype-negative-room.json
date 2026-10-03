@@ -32,5 +32,52 @@
         }
       ]
     }
-  ]
+  ],
+  "liquids": {},
+  "batches": {
+    "B-0620": {
+      "id": "B-0620",
+      "ratio": "旧档沿用",
+      "targetConcentration": 0.1,
+      "measuredConcentration": null,
+      "components": [],
+      "stages": [
+        {
+          "step": "倒缸确认",
+          "at": "2026-06-20T00:00:00.000Z",
+          "by": "旧档迁移"
+        }
+      ],
+      "status": "已确认",
+      "totalKg": 0,
+      "availableKg": 0,
+      "revision": 1,
+      "history": [],
+      "createdAt": "2026-06-20T00:00:00.000Z",
+      "by": "旧档迁移"
+    }
+  },
+  "returnSlips": {},
+  "conclusions": [
+    {
+      "id": "JL-001",
+      "itemCode": "CN-001",
+      "batchId": "B-0620",
+      "batchRevision": 1,
+      "concentration": 0.1,
+      "defectSnapshot": "边角显影不均",
+      "wash": "合格",
+      "boxPermit": "暂缓",
+      "reason": "浓度在窗口内,存在缺陷:边角显影不均",
+      "state": "生效",
+      "computedAt": "2026-10-03T08:00:37.110Z"
+    }
+  ],
+  "journal": {},
+  "seq": {
+    "liquid": 0,
+    "batch": 0,
+    "reading": 0,
+    "conclusion": 1
+  }
 }
